@@ -20,11 +20,9 @@ output="report_bpfdoor_suspect_processes_$(date '+%Y%m%d_%H%M%S').txt"
     echo "██████╔╝██║     ██║     ██║  ██║╚██████╔╝╚██████╔╝██║ ╚████║██████╔╝"
     echo "╚═════╝ ╚═╝     ╚═╝     ╚═╝  ╚═╝ ╚═════╝  ╚═════╝ ╚═╝  ╚═══╝╚═════╝"
     echo -e "\033[1;37m                                       BPFDoor Detection Tool"
-    echo "                                               Version 0.2"
+    echo "                                               Version 0.2.1"
     echo -e "\033[0m"
 } | tee -a "$output"
-
-echo -e "[RAW 소켓을 사용하는 프로세스 탐색]" | tee -a "$output"
 
 suspicious_process_found=0
 suspicious_binary_found=0
@@ -33,6 +31,10 @@ suspicious_pids=()
 suspicious_binaries=()
 suspicious_pidfiles=()
 
+echo -e "[+] 스캔 시작..." | tee -a "$output"
+echo | tee -a "$output"
+
+echo -e "[RAW 소켓을 사용하는 프로세스 탐색]" | tee -a "$output"
 for pid in /proc/[0-9]*; do
     if grep -q 'packet_recvmsg' "$pid/stack" 2>/dev/null; then
         pid_num=$(basename "$pid")
