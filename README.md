@@ -1,6 +1,6 @@
 # 🐾 BPFHound
 
-**BPFHound** is a lightweight Linux hunting script to detect signs of the stealthy [BPFDoor](https://www.sandflysecurity.com/blog/bpfdoor-an-extremely-stealthy-linux-backdoor-using-bpf/) backdoor.
+**BPFHound** is a lightweight Linux hunting script to detect signs of the stealthy [BPFDoor](https://sandflysecurity.com/blog/bpfdoor-an-evasive-linux-backdoor-technical-analysis/) backdoor.
 
 It scans for suspicious processes using raw sockets, traces specific kernel stack patterns, and checks for known BPFDoor artifact files.
 
