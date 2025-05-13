@@ -24,3 +24,7 @@ git clone https://github.com/devjanger/BPFHound.git
 cd BPFHound
 chmod +x BPFHound.sh
 sudo ./BPFHound.sh
+```
+
+## 🖼️ Screenshot
+![image](https://github.com/user-attachments/assets/befa08b0-ca90-472d-968e-95b5c25ff1b5)
