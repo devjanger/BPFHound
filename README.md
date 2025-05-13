@@ -33,4 +33,4 @@ sudo ./BPFHound.sh
 ```
 
 ## 🖼️ Screenshot
-![image](https://github.com/user-attachments/assets/591954f2-7d91-4880-bb1b-4310c09f4c2f)
+![image](https://github.com/user-attachments/assets/34e35c3c-f93c-4e20-942d-b85be65b242e)
