@@ -22,5 +22,5 @@ It scans for suspicious processes using raw sockets, traces specific kernel stac
 ```bash
 git clone https://github.com/devjanger/BPFHound.git
 cd BPFHound
-chmod +x bpfdoor-detector.sh
-sudo ./bpfdoor-detector.sh
+chmod +x BPFHound.sh
+sudo ./BPFHound.sh
