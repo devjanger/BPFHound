@@ -11,8 +11,14 @@ It scans for suspicious processes using raw sockets, traces specific kernel stac
 - Detects processes calling `packet_recvmsg` in the kernel stack
 - Checks for BPFDoor-related artifacts such as:
   - `/dev/shm/kdmtmpflush`
-  - `/var/run/haldrund.pid`
+  - Dropper-related PID files such as:
+    - `/var/run/haldrund.pid`
+    - `/var/run/hald-smartd.pid`
+    - `/var/run/system.pid`
+    - `/var/run/hp-health.pid`
+    - `/var/run/hald-addon.pid`
 - Identifies abnormal processes using raw sockets
+- Performs MD5 hash comparisons of suspicious binaries to locate matching files across the system
 - Automatically generates a timestamped report
 
 ---
@@ -27,4 +33,4 @@ sudo ./BPFHound.sh
 ```
 
 ## 🖼️ Screenshot
-![image](https://github.com/user-attachments/assets/befa08b0-ca90-472d-968e-95b5c25ff1b5)
+![image](https://github.com/user-attachments/assets/591954f2-7d91-4880-bb1b-4310c09f4c2f)
